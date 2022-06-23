@@ -9,6 +9,7 @@ module.exports = {
     webpackChain (chain) {
       chain.plugin('record').use(webpack.ProvidePlugin, [{
         'crypto.getRandomValues': 'polyfill-crypto.getrandomvalues',
+        'window.crypto.getRandomValues': 'polyfill-crypto.getrandomvalues',
       }]);
     }
   },
